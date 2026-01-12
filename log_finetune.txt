@@ -1,0 +1,107 @@
+(hw7_311) jovyan@deployment-1066-1595-1768240665127648039-57474b8d64-gfhjg:~/Homework7-Submission$ python finetune_llama.py
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+============================================================
+Starting Fine-Tuning Process
+============================================================
+
+1. Loading model: unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit
+   - Max sequence length: 2048
+   - 4-bit quantization: True
+==((====))==  Unsloth 2026.1.2: Fast Llama patching. Transformers: 4.57.3.
+   \\   /|    inference-ai GPU cuda. Num GPUs = 1. Max memory: 15.836 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.9.1+cu128. CUDA: 8.6. CUDA Toolkit: 12.8. Triton: 3.5.1
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.33.post2. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+model.safetensors: 100%|████████████████████████████████████████████████████████| 5.70G/5.70G [00:09<00:00, 589MB/s]
+generation_config.json: 100%|██████████████████████████████████████████████████████| 239/239 [00:00<00:00, 1.36MB/s]
+tokenizer_config.json: 55.5kB [00:00, 65.3MB/s]
+special_tokens_map.json: 100%|█████████████████████████████████████████████████████| 454/454 [00:00<00:00, 1.71MB/s]
+tokenizer.json: 100%|██████████████████████████████████████████████████████████| 17.2M/17.2M [00:00<00:00, 47.1MB/s]
+
+2. Configuring LoRA adapters
+Unsloth 2026.1.2 patched 32 layers with 32 QKV layers, 32 O layers and 32 MLP layers.
+
+3. Loading synthetic Q&A dataset
+Generating train split: 540 examples [00:00, 107144.34 examples/s]
+   - Total examples: 540
+
+   Sample entry:
+   <|system|>You are a helpful academic Q&A assistant specialized in scholarly content.<|user|>What is the aim of the study presented in the paper?<|assistant|>The study aims to build language models tha...
+
+4. Setting up training configuration
+   - Batch size: 2
+   - Gradient accumulation: 4
+   - Epochs: 3
+   - Learning rate: 0.0002
+   - Using BF16
+
+5. Initializing SFT Trainer
+Unsloth: Tokenizing ["text"] (num_proc=92): 100%|██████████████████████████| 540/540 [00:34<00:00, 15.46 examples/s]
+
+6. Starting training...
+============================================================
+The model is already on multiple devices. Skipping the move to device specified in `args`.
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1
+   \\   /|    Num examples = 540 | Num Epochs = 3 | Total steps = 204
+O^O/ \_/ \    Batch size per device = 2 | Gradient accumulation steps = 4
+\        /    Data Parallel GPUs = 1 | Total batch size (2 x 4 x 1) = 8
+ "-____-"     Trainable parameters = 41,943,040 of 8,072,204,288 (0.52% trained)
+  2%|█▌                                                                             | 4/204 [00:15<10:20,  3.10s/it]Unsloth: Will smartly offload gradients to save VRAM!
+{'loss': 3.0411, 'grad_norm': 1.080173373222351, 'learning_rate': 0.00019597989949748744, 'epoch': 0.15}
+{'loss': 1.9146, 'grad_norm': 1.1522878408432007, 'learning_rate': 0.00018592964824120604, 'epoch': 0.3}
+{'loss': 1.7846, 'grad_norm': 0.7529627084732056, 'learning_rate': 0.00017587939698492463, 'epoch': 0.44}
+{'loss': 1.7891, 'grad_norm': 0.7505263090133667, 'learning_rate': 0.00016582914572864322, 'epoch': 0.59}
+{'loss': 1.8448, 'grad_norm': 0.7938929796218872, 'learning_rate': 0.00015577889447236182, 'epoch': 0.74}
+{'loss': 1.7244, 'grad_norm': 0.686152458190918, 'learning_rate': 0.0001457286432160804, 'epoch': 0.89}
+{'loss': 1.5996, 'grad_norm': 0.7175551652908325, 'learning_rate': 0.000135678391959799, 'epoch': 1.03}
+{'loss': 1.4844, 'grad_norm': 0.892780065536499, 'learning_rate': 0.0001256281407035176, 'epoch': 1.18}
+{'loss': 1.4832, 'grad_norm': 1.0151124000549316, 'learning_rate': 0.00011557788944723618, 'epoch': 1.33}
+{'loss': 1.4757, 'grad_norm': 1.1605710983276367, 'learning_rate': 0.00010552763819095478, 'epoch': 1.47}
+{'loss': 1.4177, 'grad_norm': 1.0280259847640991, 'learning_rate': 9.547738693467337e-05, 'epoch': 1.62}
+{'loss': 1.3865, 'grad_norm': 1.1873798370361328, 'learning_rate': 8.542713567839196e-05, 'epoch': 1.77}
+{'loss': 1.3921, 'grad_norm': 1.3142344951629639, 'learning_rate': 7.537688442211056e-05, 'epoch': 1.92}
+{'loss': 1.2401, 'grad_norm': 1.218263864517212, 'learning_rate': 6.532663316582915e-05, 'epoch': 2.06}
+{'loss': 1.0905, 'grad_norm': 2.221484899520874, 'learning_rate': 5.527638190954774e-05, 'epoch': 2.21}
+{'loss': 1.0456, 'grad_norm': 1.6923112869262695, 'learning_rate': 4.522613065326633e-05, 'epoch': 2.36}
+{'loss': 0.9924, 'grad_norm': 1.7676491737365723, 'learning_rate': 3.517587939698493e-05, 'epoch': 2.5}
+{'loss': 1.0215, 'grad_norm': 2.104788303375244, 'learning_rate': 2.5125628140703518e-05, 'epoch': 2.65}
+{'loss': 0.9746, 'grad_norm': 2.169083595275879, 'learning_rate': 1.507537688442211e-05, 'epoch': 2.8}
+{'loss': 0.9956, 'grad_norm': 1.9583202600479126, 'learning_rate': 5.025125628140704e-06, 'epoch': 2.95}
+{'train_runtime': 420.0185, 'train_samples_per_second': 3.857, 'train_steps_per_second': 0.486, 'train_loss': 1.4746703867818796, 'epoch': 3.0}
+100%|█████████████████████████████████████████████████████████████████████████████| 204/204 [06:59<00:00,  2.06s/it]
+
+============================================================
+Training completed!
+Training loss: 1.4747
+============================================================
+
+7. Saving fine-tuned model
+
+Model saved to: llama3-8b-qlora-finetuned/
+
+8. Saving 16-bit version for faster inference (optional)
+config.json: 100%|█████████████████████████████████████████████████████████████████| 956/956 [00:00<00:00, 5.08MB/s]
+Found HuggingFace hub cache directory: /home/jovyan/.cache/huggingface/hub
+model.safetensors.index.json: 23.9kB [00:00, 57.9MB/s]
+Checking cache directory for required files...
+Cache check failed: model-00001-of-00004.safetensors not found in local cache.
+Not all required files found in cache. Will proceed with downloading.
+Checking cache directory for required files...
+Cache check failed: tokenizer.model not found in local cache.
+Not all required files found in cache. Will proceed with downloading.
+model-00001-of-00004.safetensors: 100%|█████████████████████████████████████████| 4.98G/4.98G [00:09<00:00, 503MB/s]
+model-00002-of-00004.safetensors: 100%|█████████████████████████████████████████| 5.00G/5.00G [00:09<00:00, 547MB/s]
+model-00003-of-00004.safetensors: 100%|█████████████████████████████████████████| 4.92G/4.92G [00:08<00:00, 596MB/s]
+model-00004-of-00004.safetensors: 100%|█████████████████████████████████████████| 1.17G/1.17G [00:02<00:00, 509MB/s]
+Unsloth: Preparing safetensor model files: 100%|██████████████████████████████████████| 4/4 [00:30<00:00,  7.54s/it]
+Note: tokenizer.model not found (this is OK for non-SentencePiece models)
+Unsloth: Merging weights into 16bit: 100%|████████████████████████████████████████████| 4/4 [00:47<00:00, 11.90s/it]
+Unsloth: Merge process complete. Saved to `/home/jovyan/Homework7-Submission/llama3-8b-qlora-finetuned-16bit`
+16-bit model saved to: llama3-8b-qlora-finetuned-16bit/
+
+============================================================
+Fine-tuning process completed successfully!
+============================================================
+
