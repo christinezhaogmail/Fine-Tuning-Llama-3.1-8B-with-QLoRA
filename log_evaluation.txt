@@ -1,0 +1,301 @@
+(hw7_311) jovyan@deployment-1066-1595-1768240665127648039-57474b8d64-gfhjg:~/Homework7-Submission$ python evaluate_models.py
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+================================================================================
+Model Evaluation: Base vs. Fine-Tuned
+================================================================================
+
+1. Loading BASE model...
+==((====))==  Unsloth 2026.1.2: Fast Llama patching. Transformers: 4.57.3.
+   \\   /|    inference-ai GPU cuda. Num GPUs = 1. Max memory: 15.836 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.9.1+cu128. CUDA: 8.6. CUDA Toolkit: 12.8. Triton: 3.5.1
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.33.post2. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+   Base model loaded successfully
+
+2. Loading FINE-TUNED model...
+==((====))==  Unsloth 2026.1.2: Fast Llama patching. Transformers: 4.57.3.
+   \\   /|    inference-ai GPU cuda. Num GPUs = 1. Max memory: 15.836 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.9.1+cu128. CUDA: 8.6. CUDA Toolkit: 12.8. Triton: 3.5.1
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.33.post2. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Unsloth 2026.1.2 patched 32 layers with 32 QKV layers, 32 O layers and 32 MLP layers.
+   Fine-tuned model loaded successfully
+
+3. Running evaluation on test questions...
+================================================================================
+
+================================================================================
+QUESTION 1/10
+================================================================================
+Q: What is the main hypothesis or research question addressed in recent quantum computing papers?
+
+BASE MODEL ANSWER:
+--------------------------------------------------------------------------------
+Recent quantum computing papers often address various research questions, but some common hypotheses and questions include:
+
+1. **Quantum Supremacy**: Can a quantum computer perform a task exponentially faster than a classical computer? (Research question: Is it possible to demonstrate quantum supremacy over a specific problem?)
+
+2. **Quantum Error Correction**: How can we mitigate errors that arise due to decoherence and other sources of noise in quantum systems? (Hypothesis: Developing robust quantum error correction protocols will be essential for large-scale quantum computing.)
+
+3. **Quantum Algorithms for Specific Problems**: Can we develop efficient quantum algorithms for solving complex problems like simulation, optimization, or machine learning tasks? (Research question: Will a quantum computer outperform a classical computer on these tasks?)
+
+4. **Quantum-Classical Hybrid Approaches**: Can we leverage the strengths of both quantum and classical computing to solve complex problems more efficiently? (Hypothesis: Combining quantum and classical computing resources will lead to breakthroughs in areas like machine learning and cryptography.)
+
+5. **Scalability and Interoperability**: As quantum computing technology advances, how will we ensure seamless integration with existing classical infrastructure and enable practical applications at scale? (Research question: What standards and protocols will facilitate interoperability between quantum devices and
+
+--------------------------------------------------------------------------------
+FINE-TUNED MODEL ANSWER:
+--------------------------------------------------------------------------------
+By focusing on improving architecture design rather than model scale or precision. The authors suggest that there is no clear benefit to quantizing transformers, as large pre-trained models consistently outperform their quantized counterparts across multiple tasks.
+
+================================================================================
+QUESTION 2/10
+================================================================================
+Q: How do researchers typically evaluate the performance of deep learning models in academic studies?
+
+BASE MODEL ANSWER:
+--------------------------------------------------------------------------------
+Researchers typically evaluate the performance of deep learning models in academic studies using various metrics and evaluation protocols. Here's an overview:
+
+1. **Accuracy**: The most basic metric, accuracy measures the proportion of correct predictions out of total predictions.
+2. **Precision**: Precision is the ratio of true positives to the sum of true positives and false positives.
+3. **Recall**: Recall is the ratio of true positives to the sum of true positives and false negatives.
+4. **F1-score**: F1-score is the harmonic mean of precision and recall.
+5. **Mean Squared Error (MSE)**: MSE measures the average squared difference between predicted and actual values.
+6. **Mean Absolute Error (MAE)**: MAE calculates the average absolute difference between predicted and actual values.
+7. **Confusion Matrix**: A confusion matrix provides a summary of predicted vs. actual classifications, allowing for a detailed analysis of errors.
+8. **ROC-AUC Curve**: ROC-AUC curve plots the trade-off between true positives and false positives at different thresholds.
+9. **Loss Functions**: Researchers often use loss functions like cross-entropy or mean squared error as the objective function during training.
+
+In addition to these quantitative metrics, researchers also evaluate the performance of deep learning models through qualitative
+
+--------------------------------------------------------------------------------
+FINE-TUNED MODEL ANSWER:
+--------------------------------------------------------------------------------
+By calculating various metrics such as accuracy, F1 score, and mean absolute error (MAE), which serve as objective measures to assess model performance. These quantitative metrics provide an unbiased indication of a model's capability to generalize effectively on unseen data. They allow for direct comparisons across different architectures, training methods, or fine-tuning strategies, providing a clear indication of which approaches exhibit superior generalization capabilities. However, these metrics only offer a partial view into a model's ability to generalize effectively and may not fully capture its potential when deployed in real-world settings. Qualitative aspects such as robustness, interpretability, and deployability are equally important but are often overlooked during evaluation. To address this limitation, researchers have proposed using additional qualitative metrics such as latency and deployment overhead, which provide a more comprehensive understanding of a model's overall utility. By considering both quantitative and qualitative metrics, it is possible to achieve a deeper understanding of a model's generalization capabilities. This approach enables a more nuanced assessment that reflects a model's true potential when deployed in complex environments. Furthermore, researchers have also introduced novel benchmarking frameworks that systematically evaluate different aspects of a model's behavior, providing a structured methodology for comprehensive assessment. These frameworks offer a standardized structure for evaluating multiple facets of a model's generalization
+
+================================================================================
+QUESTION 3/10
+================================================================================
+Q: What are the common methodologies used in natural language processing research?
+
+BASE MODEL ANSWER:
+--------------------------------------------------------------------------------
+Natural Language Processing (NLP) is a subfield of artificial intelligence that deals with the interaction between computers and humans in the understanding, generation, and processing of human language. Researchers use various methodologies to develop and evaluate NLP systems. Here are some common ones:
+
+1. **Machine Learning**: A key methodology in NLP, machine learning involves training algorithms on labeled datasets to learn patterns and relationships in language data.
+2. **Deep Learning**: A subset of machine learning, deep learning uses neural networks with multiple layers to analyze complex linguistic phenomena such as syntax, semantics, and pragmatics.
+3. **Statistical Modeling**: Statistical models like logistic regression, decision trees, and random forests are used to model language phenomena and make predictions or classify text.
+4. **Rule-Based Systems**: These systems rely on manually crafted rules and dictionaries to process language, often used for tasks like spell checking and grammar correction.
+5. **Corpus Linguistics**: This approach involves analyzing large collections of texts to identify patterns, trends, and linguistic features.
+6. **Human-Computer Interaction**: NLP researchers study how humans interact with computational systems, informing design decisions for more intuitive and user-friendly interfaces.
+7. **Cognitive Science**: This interdisciplinary field examines the mental processes underlying human language comprehension
+
+--------------------------------------------------------------------------------
+FINE-TUNED MODEL ANSWER:
+--------------------------------------------------------------------------------
+The paper mentions three common methodologies: machine learning, chain-of-thought prompting, and human evaluation. However, it notes that these methods have limitations when applied to reasoning tasks. Machine learning-based approaches often struggle with interpreting internal representations, while chain-of-thought prompting is not scalable due to the high computational cost of generating lengthy thought processes. Human evaluation also has its own challenges, such as high annotation costs and subjective judgments. These limitations motivate the exploration of other methodologies for evaluating LLMs' logical capabilities.  The authors propose using mathematical verification as an alternative, which provides precise correctness labels and can be integrated into existing training pipelines. They show that this method significantly outperforms prior techniques in identifying failures in LLMs' reasoning. This study demonstrates how a systematic approach based on mathematical verification can provide more effective supervision signals than previous alternatives for evaluating and improving LLMs' logical capabilities.  The authors also show that their approach identifies failures missed by prior methods, demonstrating its potential for use in future research.  Their work suggests that precise symbolic labels derived from mathematical verification can provide a scalable way to improve LLMs' logical reasoning.   In summary, this research offers a new perspective on evaluating LLMs' logical capabilities and proposes a practical methodology for providing precise symbolic supervision
+
+================================================================================
+QUESTION 4/10
+================================================================================
+Q: Explain the significance of transformer architectures in modern AI research.
+
+BASE MODEL ANSWER:
+--------------------------------------------------------------------------------
+Transformer architectures have revolutionized the field of artificial intelligence (AI) and natural language processing (NLP), particularly in tasks such as language translation, text summarization, and question answering.
+
+The Transformer architecture was introduced in 2017 by Vaswani et al. in their paper "Attention is All You Need." This architecture replaced traditional recurrent neural networks (RNNs) and convolutional neural networks (CNNs) with self-attention mechanisms, enabling parallelization and efficiency in processing sequential data.
+
+Significance of Transformer Architectures:
+
+1. **Parallelization**: Transformers can process input sequences in parallel, making them much faster than RNNs, which process inputs sequentially.
+2. **Self-Attention Mechanisms**: Transformers use self-attention to weigh the importance of different input elements relative to each other, allowing the model to focus on relevant parts of the input sequence.
+3. **Contextual Understanding**: The self-attention mechanism enables the model to capture long-range dependencies and contextual relationships between words in a sentence or document.
+4. **Improved Accuracy**: Transformers have achieved state-of-the-art results in various NLP tasks, including machine translation, sentiment analysis, and text classification.
+
+Applications of Transformer Architectures:
+
+1. **Language Translation**: Transformers have been used to develop highly
+
+--------------------------------------------------------------------------------
+FINE-TUNED MODEL ANSWER:
+--------------------------------------------------------------------------------
+Transformer architectures have revolutionized natural language processing and other domains by providing a scalable alternative to recurrent neural networks. They operate by decomposing sequences into tokens and using self-attention mechanisms to compute context-dependent representations, eliminating the need for discrete steps or fixed-length states. This paradigm shift has enabled substantial advances across various applications, from language modeling and generation to computer vision and audio processing. However, their high computational cost remains a significant bottleneck, particularly as model scales grow. To mitigate this, researchers have explored weight compression techniques, such as quantization and pruning, but these often degrade performance due to information loss. Another approach is low-rank approximation via matrix decomposition, which can reduce memory overhead without compromising accuracy. Nonetheless, the computational cost remains significant, limiting deployment on edge devices with limited resources. As model sizes continue to balloon, efficient inference methods are urgently needed to ensure real-world viability. Therefore, developing compact yet accurate models requires careful consideration of both representational power and efficiency constraints. The authors propose a novel approach that combines weight pruning and low-rank approximation under a unified framework, leveraging gradient-based optimization to iteratively refine both the sparse structure and low-dimensional representation. They also introduce a dynamic recovery mechanism to restore performance degradation caused by early pruning, ensuring consistent accuracy throughout training. This strategy
+
+================================================================================
+QUESTION 5/10
+================================================================================
+Q: What evaluation metrics are commonly used in computer vision papers?
+
+BASE MODEL ANSWER:
+--------------------------------------------------------------------------------
+In computer vision, researchers often employ various evaluation metrics to assess the performance of their models and algorithms. Here are some common ones:
+
+1. **Precision**: The ratio of true positives (correctly predicted instances) to the sum of true positives and false positives (incorrectly predicted instances).
+2. **Recall**: The ratio of true positives to the sum of true positives and false negatives (missed instances).
+3. **F1-score**: The harmonic mean of precision and recall.
+4. **Intersection over Union (IoU)**: Measures the overlap between predicted and ground-truth bounding boxes or masks.
+5. **Mean Average Precision (mAP)**: Evaluates the average precision at different recall levels for object detection tasks.
+6. **Peak Signal-to-Noise Ratio (PSNR)**: For image quality assessment, measures the difference between original and reconstructed images.
+7. **Structural Similarity Index Measure (SSIM)**: Another image quality metric that assesses similarity between two images.
+8. **Dice Coefficient**: Measures the similarity between two sets of data by comparing the intersection and union of the two sets.
+9. **Average IoU (AUC)**: Computes the area under the IoU curve to evaluate the overall performance of an algorithm.
+10
+
+--------------------------------------------------------------------------------
+FINE-TUNED MODEL ANSWER:
+--------------------------------------------------------------------------------
+Commonly used evaluation metrics include precision, recall, the F1 score, accuracy, mean absolute error (MAE), and intersection over union (IoU). The choice of metric depends on the task at hand. For instance, IoU is particularly useful for evaluating semantic segmentation tasks, while average precision (AP) is often preferred for object detection tasks. In some cases, multiple metrics may be reported to provide a comprehensive understanding of model performance. When evaluating models, it's also common to use learning curves or charts to visualize training and validation loss over epochs or iterations. This helps illustrate how well a model adapts to new data during training.  The use of validation sets during training allows for real-time monitoring of performance using these visualizations.  While the most widely used metric remains accuracy, the broader range of options available reflects the growing diversity of application domains in computer vision. As researchers continue to push the boundaries of what can be achieved with deep learning models, this diversity is likely to grow further.   In terms of architectures, convolutional neural networks (CNNs) remain the foundation for many applications due to their ability to automatically learn features from raw pixel inputs. However, other architectures such as transformers have gained significant attention in recent years for their versatility beyond image recognition tasks.
+
+================================================================================
+QUESTION 6/10
+================================================================================
+Q: How do academic papers typically structure their experimental validation?
+
+BASE MODEL ANSWER:
+--------------------------------------------------------------------------------
+In academic papers, the experimental validation section is crucial as it provides evidence to support the claims made by the authors. The typical structure of this section can vary depending on the discipline and research design, but here's a general outline:
+
+1. **Introduction**: Briefly reintroduce the problem or hypothesis being tested and explain why the experiment was conducted.
+2. **Methods**: Provide detailed descriptions of:
+	* Experimental design (e.g., controlled, randomized, or quasi-experimental)
+	* Sampling procedures (if applicable)
+	* Data collection methods (e.g., surveys, interviews, observations, or experiments)
+	* Dependent variables measured
+3. **Results**: Present the findings of the experiment, including:
+	* Descriptive statistics (e.g., means, medians, standard deviations)
+	* Inferential statistics (e.g., t-tests, ANOVA, regression analyses) to compare groups or test hypotheses
+	* Visualizations (e.g., graphs, charts) to illustrate key results
+4. **Discussion**: Interpret the results in light of the research question or hypothesis, addressing:
+	* Implications of the findings
+	* Limitations of the study
+	* Potential avenues for future research
+5. **Conclusion**: Summarize the main
+
+--------------------------------------------------------------------------------
+FINE-TUNED MODEL ANSWER:
+--------------------------------------------------------------------------------
+Academic papers typically follow the IMRaC structure, which includes Introduction, Methods, Results, and Conclusion. Within this structure, the Results section is often divided into visualized tables and charts that summarize key findings, accompanied by concise text descriptions. This format allows readers to quickly grasp important results while also providing detailed supporting evidence for deeper analysis or replication. However, the effectiveness of this format can vary depending on the specific paper's complexity and target audience. In general, it strikes a good balance between clarity and detail but may not be ideal for highly technical or nuanced research where more explicit breakdowns are necessary.  The IMRaC structure offers a clear framework for organizing scientific content but may require additional effort for complex or specialized topics. It remains widely adopted due to its logical progression and communicative efficiency.  While effective for many purposes, it does have limitations when dealing with intricate details or specialized domains where explicit breakdowns are essential.   Academic papers employ structured formats like IMRaC to ensure clarity and concision but may need supplementary resources for in-depth understanding.  For specialized or highly technical subjects requiring detailed breakdowns, alternative structures such as step-by-step workflows or explicit decision trees might offer clearer guidance.  Despite these considerations, the IMRaC framework remains a cornerstone of scholarly
+
+================================================================================
+QUESTION 7/10
+================================================================================
+Q: What is the role of ablation studies in machine learning research?
+
+BASE MODEL ANSWER:
+--------------------------------------------------------------------------------
+Ablation studies play a crucial role in machine learning research by providing insights into the importance and relevance of different components within a model. Ablation, derived from the Latin term "ablatio," meaning stripping or removal, refers to the process of selectively removing or manipulating certain features, variables, or components of a model to understand their individual contributions to its performance.
+
+In machine learning, ablation studies involve systematically evaluating how changes to specific elements (e.g., features, algorithms, hyperparameters) affect the overall performance of a model. This can include:
+
+1. **Feature importance analysis**: Identifying which input features contribute most significantly to the model's predictions.
+2. **Component replacement**: Replacing a component with an alternative to see if it improves or degrades the model's performance.
+3. **Hyperparameter tuning**: Investigating the impact of varying hyperparameters on the model's performance.
+4. **Model pruning**: Reducing the complexity of a model by removing redundant neurons or connections to assess its effect on performance.
+
+The primary goals of ablation studies in machine learning are:
+
+- **Model interpretability**: Understanding why a model makes certain decisions or predictions.
+- **Improving model performance**: Identifying key factors that influence model outcomes and adjusting them for better results.
+
+--------------------------------------------------------------------------------
+FINE-TUNED MODEL ANSWER:
+--------------------------------------------------------------------------------
+Ablation studies help determine how different components contribute to performance, informing model design. In this work, ablation studies are used to assess the impact of various design choices on model performance. The authors show that removing any single component (prompt optimization or chain-of-thought) significantly reduces accuracy, while combining both boosts performance across all datasets. They also find that training with only one dataset still yields strong generalization, suggesting that their approach captures essential features of mathematical reasoning. The results demonstrate that their method is not just an efficient preprocessing technique but a principled way to inject domain-specific knowledge into LLMs. However, they do observe some degradation when applying their method to non-mathematical and multi-step problems, indicating potential limitations of their approach for more complex domains. Despite these findings, the authors' method remains highly effective for math-related tasks. Future work may explore adapting their approach to other problem domains or investigating whether their findings generalize to other types of models or training paradigms. The code for the experiments is publicly available at https://github.com/thu-coop/chain_of_thought_math. The research paper is published under a CC-BY 4.0 license. The authors make no claims of copyright over their work, allowing it to be freely shared
+
+================================================================================
+QUESTION 8/10
+================================================================================
+Q: Describe common approaches to handling data imbalance in classification tasks.
+
+BASE MODEL ANSWER:
+--------------------------------------------------------------------------------
+There are several approaches to handle data imbalance in classification tasks:
+
+1.  **Oversampling the minority class**: This involves creating additional copies of the minority class instances, thereby increasing its representation and potentially improving the model's performance on that class.
+2.  **Undersampling the majority class**: In this approach, some instances from the majority class are randomly removed or downsampled to reduce its dominance over the minority class.
+3.  **Synthetic Minority Over-sampling Technique (SMOTE)**: SMOTE generates new synthetic samples along the line segments joining any two minority class instances, effectively increasing the number of minority class instances without altering their distribution.
+4.  **Cost-sensitive learning**: This method assigns different costs to misclassifications for each class, reflecting the relative importance of accurate predictions for each class.
+5.  **Class weighting**: Similar to cost-sensitive learning, but instead of assigning specific costs, weights are assigned to classes based on their prevalence, allowing the model to adjust its decision boundaries accordingly.
+6.  **Ensemble methods**: Techniques like bagging and boosting can be used to combine multiple models trained on imbalanced data, which can lead to improved overall performance by reducing the impact of class imbalance.
+7.  **Data augmentation techniques**: Methods such
+
+--------------------------------------------------------------------------------
+FINE-TUNED MODEL ANSWER:
+--------------------------------------------------------------------------------
+Common approaches include oversampling minority classes, undersampling majority classes, synthetic minority over-sampling (SMOTE), and cost-sensitive training. However, these methods often have limitations such as changing the data distribution, introducing noisy samples, or compromising model performance on the majority class. The proposed method aims to address these limitations by leveraging intrinsic class separation within the decision boundary of a trained classifier to construct high-quality, balanced subsets. This approach provides a principled alternative for handling data imbalance without modifying the original data distribution or introducing noisy samples. It also offers flexible control over subset quality through hyperparameter tuning and can be applied to any binary classification problem without requiring additional annotation or domain knowledge. Furthermore, it preserves the original data distribution, ensuring that the model's performance on the majority class is not compromised during subsampling. By constructing subsets along the intrinsic class boundary, this approach ensures that each subset contains instances from both classes, providing a clear direction for future work to investigate whether subsets constructed along intrinsic boundaries exhibit superior generalization capabilities compared to randomly constructed counterparts. This research demonstrates that the intrinsic class boundary of a trained classifier can provide strong guidance for constructing high-quality, balanced subsets for handling data imbalance in classification tasks. It shows that this approach has the potential to improve model robustness and provide more interpretable
+
+================================================================================
+QUESTION 9/10
+================================================================================
+Q: What are the key differences between supervised and unsupervised learning approaches?
+
+BASE MODEL ANSWER:
+--------------------------------------------------------------------------------
+In machine learning, supervised and unsupervised learning are two fundamental types of approaches used to analyze and make predictions from data.
+
+**Supervised Learning:**
+
+1.  **Labelled Data**: Supervised learning involves training algorithms on labelled data, where each example is accompanied by a target or response variable.
+2.  **Predictive Modelling**: The goal is to build a predictive model that can accurately predict the target variable for new, unseen data.
+3.  **Teacher-Student Paradigm**: This approach can be seen as a teacher-student paradigm, where the algorithm learns from examples provided by a teacher (the person who created the labelled dataset).
+4.  **Applications**: Supervised learning is widely used in applications like image classification, natural language processing, speech recognition, and regression analysis.
+
+**Unsupervised Learning:**
+
+1.  **Unlabelled Data**: Unsupervised learning involves training algorithms on unlabelled data, without any predefined target or response variable.
+2.  **Pattern Discovery**: The primary objective is to discover hidden patterns, relationships, or structures within the data.
+3.  **Self-Exploration**: In this approach, the algorithm explores the data on its own, without external guidance or supervision.
+4.  **Applications**:
+
+--------------------------------------------------------------------------------
+FINE-TUNED MODEL ANSWER:
+--------------------------------------------------------------------------------
+Supervised learning requires labeled training data to distinguish harmful from non-harmful prompts, while unsupervised approaches can identify harmfulness without explicit labels. Supervised fine-tuning can improve performance but is impractical for unknown future threats, whereas knowledge distillation allows zero-shot adaptation at negligible cost but often fails to capture essential threat cues. The proposed approach uses prompt-only supervision to train student models and achieves superior performance across multiple benchmarks. It also demonstrates that a well-designed student model with minimal parameters can outperform its heavily parameterized teacher. This indicates a clear path forward for developing lightweight yet effective LLM defenses. The approach provides an efficient way to transfer threat detection capabilities from larger models to smaller ones, enabling practical deployment on resource-constrained devices. The experimental results show that the proposed method significantly improves the ability of student models to detect harmful prompts compared to traditional methods. It also demonstrates that student models can achieve superior performance over their heavier counterparts, indicating potential for deploying lightweight yet effective defenses. The code for the study has been made publicly available to facilitate reproducibility and further research. The findings suggest that reusing pre-trained language models through prompt-based instruction tuning may provide a more feasible route than direct retraining for improving the safety properties of deployed models. The work highlights the challenges faced
+
+================================================================================
+QUESTION 10/10
+================================================================================
+Q: How do researchers address reproducibility in their experiments?
+
+BASE MODEL ANSWER:
+--------------------------------------------------------------------------------
+Addressing reproducibility is crucial in scientific research to ensure the reliability and validity of findings. Researchers employ several strategies to promote reproducibility:
+
+1.  **Documentation**: Detailed documentation of methods, materials, data collection, and analysis procedures helps others understand and replicate the study.
+2.  **Transparency**: Sharing raw data, code, and methodologies through open-access repositories or online platforms like GitHub facilitates transparency and accountability.
+3.  **Replication studies**: Conducting replication studies by independent researchers verifies the initial findings and provides an opportunity for methodological improvements.
+4.  **Pre-registration**: Registering a study before collecting data (pre-registering) ensures that hypotheses and methods are clearly defined, reducing the likelihood of bias and increasing credibility.
+5.  **Standardization**: Adopting standardized protocols and procedures promotes consistency across similar studies, making it easier to compare results.
+6.  **Peer review**: Rigorous peer-review processes help identify potential issues with methodology and interpretation, ensuring that published findings meet high standards.
+7.  **Collaboration**: Interdisciplinary collaboration and sharing expertise facilitate the development of more robust methodologies and improve overall research quality.
+
+By implementing these strategies, researchers can enhance the reproducibility of their experiments and contribute to the advancement of knowledge in their
+
+--------------------------------------------------------------------------------
+FINE-TUNED MODEL ANSWER:
+--------------------------------------------------------------------------------
+To ensure reproducibility, the authors open-source all code and data. They also conduct extensive ablation studies to examine sensitivity across different model scales and training steps. Additionally, they perform statistical tests to quantify significant differences between models. This ensures that results are robust rather than just statistically fluky. The authors also conduct manual qualitative analysis of generated text to identify 'hopping too late' failures where the student attempts reasoning after missing critical steps. This allows for a nuanced understanding beyond binary success metrics. Finally, they provide an interactive web-based visualization tool to facilitate exploration of the dynamics of instruction following during chain-of-thought. This approach enables a systematic and detailed characterization of errors and failures throughout the entire chain-of-thought process.  To improve instruction following in LLMs, the researchers propose using reinforcement learning with a novel reward function based on minimal cognitive grounding. This function provides sparse rewards only when the student's response is grounded in the dialogue history or visually observed context. They also introduce a curriculum that starts with simple one-turn problems and gradually increases problem length up to five turns. This curriculum helps stabilize training and improves generalization. Furthermore, they incorporate token-level attention weighting into the reward function to better capture subtle failures in multi-hop reasoning. By combining these elements, they demonstrate substantial
+
+================================================================================
+EVALUATION COMPLETE
+================================================================================
+
+4. Saving evaluation results to file...
+Results saved to: evaluation_results.txt
+
+================================================================================
+Summary:
+- Evaluated 10 questions
+- Results saved to evaluation_results.txt
+- Review the outputs to assess improvement in:
+  * Accuracy and relevance
+  * Use of academic terminology
+  * Depth and detail of answers
+  * Correction of base model mistakes
+================================================================================
+
