@@ -1,4 +1,4 @@
-# Week 7 Assignment: Fine-Tuning Llama 3.1 8B with QLoRA
+# Fine-Tuning Llama 3.1 8B with QLoRA
 
 Complete implementation for generating synthetic Q&A data and fine-tuning a Llama model.
 
